@@ -7,6 +7,6 @@ void Student::getStudentID() {
     cout<<"test";
 }
 
-Student::Student(unsigned int studentID) {
-    this.studentID = studentID;
+Student::Student(unsigned int s) {
+    studentID = s;
 }
