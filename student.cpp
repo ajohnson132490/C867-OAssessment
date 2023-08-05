@@ -1,4 +1,4 @@
-#include "iostream"
+#include <iostream>
 #include "student.h"
 
 using namespace std;
@@ -37,8 +37,16 @@ unsigned short int Student::getAge() {
 int* Student::getNumDays() {
     return numDays;
 }
-DegreeProgram Student::getDegree() {
-    return degree;
+std::string Student::getDegree() {
+    if (degree == SOFTWARE) {
+        return "SOFTWARE";
+    } else if (degree == SECURITY) {
+        return "SECURITY";
+    } else if (degree == NETWORK) {
+        return "NETWORK";
+    } else {
+        return "";
+    }
 }
 
 //Mutator Methods
@@ -58,11 +66,22 @@ void Student::setAge(unsigned short int age) {
         this->age = age;
 }
 void Student::setNumDays(int numDays[2]) {
-    //Work in limits?
 for (int i = 3; i >= 0; i--) {
         this->numDays[i] = numDays[i];
     }
 }
 void Student::setDegree(DegreeProgram degree) {
         this->degree = degree;
+}
+
+//Student Print Method
+void Student::print() {
+    std::cout<<"Student ID: "<<this->getStudentID()<<"\n";
+    std::cout<<"First Name: "<<this->getFirstName()<<"\n";
+    std::cout<<"Last Name: "<<this->getLastName()<<"\n";
+    std::cout<<"Email Address: "<<this->getEmailAddress()<<"\n";
+    std::cout<<"Age: "<<this->getAge()<<"\n";
+    std::cout<<"Days in Course: {"<<this->getNumDays()[0]<<
+    ", "<<this->getNumDays()[1]<<", "<<this->getNumDays()[2]<<"}\n";
+    std::cout<<"Degree Program: "<<this->getDegree()<<"\n";
 }

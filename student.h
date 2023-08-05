@@ -17,7 +17,7 @@ class Student {
         std::string getEmailAddress();
         unsigned short int getAge();
         int* getNumDays();
-        DegreeProgram getDegree();
+        std::string getDegree();
 
         //Mutator Methods
         void setStudentID(unsigned int studentID);
@@ -27,6 +27,9 @@ class Student {
         void setAge(unsigned short int age);
         void setNumDays(int numDays[3]);
         void setDegree(DegreeProgram degree);
+
+        //Print Method
+        void print();
 
 
     private:
