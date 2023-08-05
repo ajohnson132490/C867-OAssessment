@@ -1,5 +1,7 @@
 #include <iostream>
+#include "student.h"
 
 int main() {
-    std::cout<<"\n\n\ntest how\n\n\n";
+    Student s(15);
+    s.getStudentID();
 }
