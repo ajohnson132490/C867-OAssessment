@@ -2,6 +2,6 @@
 #include "student.h"
 
 int main() {
-    Student s(15);
-    s.getStudentID();
+    std::cout<<"hate";
+    Student s(10);
 }
