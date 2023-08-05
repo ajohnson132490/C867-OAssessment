@@ -4,14 +4,14 @@
 using namespace std;
 
 //Student Constructor
-Student::Student(unsigned int studentID, std::string firstName, std::string lastName,
-        std::string emailAddress, unsigned short int age, int numDays[], DegreeProgram degree) {
+Student::Student(std::string studentID, std::string firstName, std::string lastName,
+        std::string emailAddress, int age, int numDays[], DegreeProgram degree) {
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
     this->emailAddress = emailAddress;
     this->age = age;
-    int len = sizeof(numDays)/sizeof(numDays[0]);
+    int len = (int)(sizeof(numDays[0]));
     for (int i = len; i >= 0; i--) {
         this->numDays[i] = numDays[i];
     }
@@ -19,7 +19,7 @@ Student::Student(unsigned int studentID, std::string firstName, std::string last
 }
 
 //Student Accessor Methods
-unsigned int Student::getStudentID() {
+std::string Student::getStudentID() {
     return studentID;
 }
 std::string Student::getFirstName() {
@@ -31,7 +31,7 @@ std::string Student::getLastName() {
 std::string Student::getEmailAddress() {
     return emailAddress;
 }
-unsigned short int Student::getAge() {
+int Student::getAge() {
     return age;
 }
 int* Student::getNumDays() {
@@ -50,7 +50,7 @@ std::string Student::getDegree() {
 }
 
 //Mutator Methods
-void Student::setStudentID(unsigned int studentID) {
+void Student::setStudentID(std::string studentID) {
         this->studentID = studentID;
 }
 void Student::setFirstName(std::string firstName) {
@@ -62,7 +62,7 @@ void Student::setLastName(std::string lastName) {
 void Student::setEmailAddress(std::string emailAddress) {
         this->emailAddress = emailAddress;
 }
-void Student::setAge(unsigned short int age) {
+void Student::setAge(int age) {
         this->age = age;
 }
 void Student::setNumDays(int numDays[2]) {

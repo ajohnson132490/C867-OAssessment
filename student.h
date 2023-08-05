@@ -7,24 +7,24 @@
 class Student {
     public:
         //Primary constructor
-        Student(unsigned int studentID, std::string firstName, std::string lastName,
-        std::string emailAddress, unsigned short int age, int numDays[], DegreeProgram degree);
+        Student(std::string studentID, std::string firstName, std::string lastName,
+        std::string emailAddress, int age, int numDays[], DegreeProgram degree);
 
         //Accessor Methods
-        unsigned int getStudentID();
+        std::string getStudentID();
         std::string getFirstName();
         std::string getLastName();
         std::string getEmailAddress();
-        unsigned short int getAge();
+        int getAge();
         int* getNumDays();
         std::string getDegree();
 
         //Mutator Methods
-        void setStudentID(unsigned int studentID);
+        void setStudentID(std::string studentID);
         void setFirstName(std::string firstName);
         void setLastName(std::string lastName);
         void setEmailAddress(std::string emailAddress);
-        void setAge(unsigned short int age);
+        void setAge(int age);
         void setNumDays(int numDays[3]);
         void setDegree(DegreeProgram degree);
 
@@ -33,11 +33,11 @@ class Student {
 
 
     private:
-        unsigned int studentID;
+        std::string studentID;
         std::string firstName;
         std::string lastName;
         std::string emailAddress;
-        unsigned short int age;
+        int age;
         int numDays[3];
         DegreeProgram degree;
 

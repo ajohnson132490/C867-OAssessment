@@ -19,3 +19,4 @@ roster.o: roster.cpp roster.h
 # Clean it up after
 clean:
 	rm *.o main
+
