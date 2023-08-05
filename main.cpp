@@ -1,5 +1,5 @@
 #include <iostream>
 
 int main() {
-    std::cout<<"\n\n\ntest\n\n\n";
+    std::cout<<"\n\n\ntest how\n\n\n";
 }
