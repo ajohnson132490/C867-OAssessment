@@ -17,6 +17,9 @@ Student::Student(std::string studentID, std::string firstName, std::string lastN
     }
     this->degree = degree;
 }
+Student::Student() {
+    
+}
 
 //Student Accessor Methods
 std::string Student::getStudentID() {

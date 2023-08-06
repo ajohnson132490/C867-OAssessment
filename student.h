@@ -7,6 +7,7 @@
 class Student {
     public:
         //Primary constructor
+        Student();
         Student(std::string studentID, std::string firstName, std::string lastName,
         std::string emailAddress, int age, int numDays[], DegreeProgram degree);
 
