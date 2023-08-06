@@ -2,9 +2,13 @@
 #define ROSTER_H_
 
 #include "student.h"
+#include <cstdlib>
+#define classRosterSize 5
+
 
 class Roster {
     public:
+        //Constructor 
         Roster();
         //Mutator Methods
         void add(std::string studentID, std::string firstName, std::string lastName, std::string emailAddress, int age,
@@ -19,7 +23,8 @@ class Roster {
 
     private:
         //List of all students
-        Student** classRosterArray = new Student*[1];
+        Student* classRosterArray[classRosterSize];
+        int rosterPos = 0;
 };
 
 #endif
