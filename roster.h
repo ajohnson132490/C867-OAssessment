@@ -3,7 +3,7 @@
 
 #include "student.h"
 #include <cstdlib>
-#define classRosterSize 5
+#define classRosterSize 15
 
 
 class Roster {
@@ -21,7 +21,6 @@ class Roster {
         void printInvalidEmails();
         void printByDegreeProgram(DegreeProgram degreeProgram);
 
-    private:
         //List of all students
         Student* classRosterArray[classRosterSize];
         int rosterPos = 0;
